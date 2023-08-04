@@ -11,6 +11,10 @@ body {
 body:hover {
   cursor: url("./img/pointer.png"), auto;
 }
+button {
+  cursor: url("./img/clicker.png"), auto;
+}
+
 :root {
   --lightGrey: rgb(192, 196, 200);
   --darkGrey: #84888c;
@@ -61,6 +65,91 @@ body:hover {
 /* icons End */
 
 /* comment Start */
+@media (min-width: 992px) {
+  /* large */
+  .modal {
+    background-color: var(--darkGrey);
+    width: 65%;
+    height: 60%;
+    overflow: scroll;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    /* visibility: hidden; */
+  }
+}
+.cmt {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--lightGrey);
+  overflow: hidden;
+}
+.cmtRes {
+  flex-basis: 50%;
+  position: relative;
+}
+.cmtWriteDiv {
+  background-color: var(--lightGrey);
+  flex-basis: 50%;
+}
+#cmtWrite {
+  width: 70%;
+  position: relative;
+  /* bottom: 0; */
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (min-width: 992px) {
+  /* large */
+  #cmtBtn {
+    position: absolute;
+    bottom: 10%;
+    right: 8%;
+    width: fit-content;
+    height: 8%;
+    overflow: inherit;
+    background-color: var(--lightGrey);
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    border-bottom: 3px solid var(--borderGray);
+    border-right: 3px solid var(--borderGray);
+  }
+}
+@media (min-width: 576px) and (max-width: 992px) {
+  /* medium */
+  #cmtBtn {
+    position: absolute;
+    bottom: 25%;
+    right: 5%;
+    width: fit-content;
+    height: 8%;
+    overflow: inherit;
+    background-color: var(--lightGrey);
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    border-bottom: 3px solid var(--borderGray);
+    border-right: 3px solid var(--borderGray);
+  }
+}
+@media (max-width: 576px) {
+  /* small */
+  #cmtBtn {
+    position: absolute;
+    bottom: 5%;
+    right: 1%;
+    width: fit-content;
+    height: 8%;
+    overflow: inherit;
+    background-color: var(--lightGrey);
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    border-bottom: 3px solid var(--borderGray);
+    border-right: 3px solid var(--borderGray);
+  }
+}
 /* comment End */
 
 /* imgModal Start*/
@@ -68,13 +157,15 @@ body:hover {
   /* large */
   .modal {
     background-color: var(--darkGrey);
-    width: 40%;
+    width: 65%;
     height: 60%;
     overflow: scroll;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 2;
+
     /* visibility: hidden; */
   }
 }
@@ -90,6 +181,7 @@ body:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 2;
     /* visibility: hidden; */
   }
 }
@@ -97,13 +189,14 @@ body:hover {
   /* small */
   .modal {
     background-color: var(--darkGrey);
-    width: 60%;
+    width: 70%;
     height: 45%;
     overflow: scroll;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 2;
     /* visibility: hidden; */
   }
 }
@@ -114,9 +207,19 @@ body:hover {
   justify-content: space-between;
 }
 .topBarRight {
-  background-color: var(--lightGrey);
   color: black;
   background-color: var(--darkGrey);
+}
+.topBarRight button {
+  background-color: var(--lightGrey);
+  border-top: 3px solid white;
+  border-left: 3px solid white;
+  border-bottom: 3px solid var(--borderGray);
+  border-right: 3px solid var(--borderGray);
+}
+#xBtn {
+  /* xBtn */
+  margin-right: 10px;
 }
 .topBarLeft {
   margin-left: 1%;
@@ -134,7 +237,7 @@ img {
 }
 .colors > button {
   width: 10%;
-  height: 5vh;
+  height: 10vh;
   border-color: var(--borderWhite);
 }
 #btn1 {
@@ -192,6 +295,7 @@ img {
   height: 100%;
   width: 100%;
 }
+
 #prcs {
   background-color: var(--lightGrey);
   border-top: 3px solid white;
@@ -218,14 +322,16 @@ img {
     position: absolute;
     bottom: 8%;
     overflow: inherit;
+    z-index: 3;
+
     /* visibility: hidden; */
   }
 }
 @media (min-width: 576px) and (max-width: 992px) {
   /* medium */
   .windowModal {
-    width: 20%;
-    height: 40%;
+    width: 30%;
+    height: 35%;
     background-color: var(--lightGrey);
     display: flex;
     flex-direction: column;
@@ -237,6 +343,8 @@ img {
     position: absolute;
     bottom: 4%;
     overflow: inherit;
+    z-index: 3;
+
     /* visibility: hidden; */
   }
 }
@@ -244,7 +352,7 @@ img {
   /* small */
   .windowModal {
     width: 35%;
-    height: 50%;
+    height: 40%;
     background-color: var(--lightGrey);
     display: flex;
     flex-direction: column;
@@ -256,6 +364,8 @@ img {
     position: absolute;
     bottom: 3%;
     overflow: inherit;
+    /* visibility: hidden; */
+    z-index: 3;
   }
 }
 .prgm {
