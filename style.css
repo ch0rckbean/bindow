@@ -4,7 +4,10 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 0;
+  background-color: aqua;
+}
+body:hover {
+  cursor: url("./img/pointer.png"), auto;
 }
 :root {
   --lightGrey: rgb(192, 196, 200);
@@ -12,9 +15,36 @@ body {
   --borderWhite: rgb(228, 226, 226);
   --borderGray: gray;
 }
-.show {
+/* .show {
   visibility: visible;
+} */
+
+/* Make components */
+/* icons Start */
+.icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 5%;
+  height: 80%;
+  margin-top: 1%;
+  margin-left: 1%;
+  text-align: center;
 }
+.icons img {
+  width: 80%;
+  height: 50%;
+}
+.icons a {
+  text-decoration: none;
+}
+.icons p {
+  color: white;
+}
+/* icons End */
+
+/* comment Start */
+/* comment End */
 
 /* imgModal Start*/
 .modal {
@@ -36,6 +66,7 @@ body {
 .topBarRight {
   background-color: var(--lightGrey);
   color: black;
+  background-color: var(--darkGrey);
 }
 .topBarLeft {
   margin-left: 1%;
@@ -203,5 +234,4 @@ img {
   flex-direction: column;
   justify-content: space-around;
 } */
-
 /* windowModal End */
