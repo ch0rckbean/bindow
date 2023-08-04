@@ -1,0 +1,89 @@
+body {
+  /* background-color: #4da8a8; */
+  margin: 0;
+  background-color: salmon;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.show {
+  visibility: visible;
+}
+:root {
+  --lightGrey: (192, 196, 200);
+  --darkGrey: #84888c;
+  --borderWhite: (228, 226, 226);
+}
+
+/* imgModal start*/
+.modal {
+  background-color: var(--darkGrey);
+  width: 40%;
+  height: 40%;
+  overflow: scroll;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* visibility: hidden; */
+}
+.topBar {
+  background-color: var(--darkGrey);
+  display: flex;
+  justify-content: space-between;
+}
+.topBarRight {
+  background-color: var(--lightGrey);
+  color: black;
+}
+.topBarLeft {
+  margin-left: 1%;
+  color: white;
+}
+img {
+  width: 100%;
+  height: 90%;
+}
+.colors {
+  background-color: var(--darkGrey);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.colors > button {
+  width: 10%;
+  height: 5vh;
+  border-color: var(--borderWhite);
+  /* border-bottom: 3px solid var(--borderWhite); */
+}
+#btn1 {
+  background-color: aquamarine;
+}
+#btn2 {
+  background-color: pink;
+}
+#btn3 {
+  background-color: palegreen;
+}
+#btn4 {
+  background-color: plum;
+}
+#btn5 {
+  background-color: paleturquoise;
+}
+#btn6 {
+  background-color: lemonchiffon;
+}
+#btn7 {
+  background-color: violet;
+}
+#btn8 {
+  background-color: sandybrown;
+}
+#btn9 {
+  background-color: steelblue;
+}
+#btn10 {
+  background-color: slateblue;
+}
+/* imgModal End */
