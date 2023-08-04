@@ -1,10 +1,12 @@
 body {
-  /* background-color: #4da8a8; */
+  background-color: #008080;
   margin: 0;
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: aqua;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 body:hover {
   cursor: url("./img/pointer.png"), auto;
@@ -20,16 +22,30 @@ body:hover {
 } */
 
 /* Make components */
+/* .sixPer {
+  flex-basis: 60%;
+  background-color: violet;
+  display: flex;
+}
+.fourPer {
+  flex-basis: 40%;
+  background-color: yellowgreen;
+  position: relative;
+  bottom: 0;
+} */
+
 /* icons Start */
 .icons {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 5%;
-  height: 80%;
+  height: 100%;
   margin-top: 1%;
   margin-left: 1%;
   text-align: center;
+  /* background-color: yellow; */
 }
 .icons img {
   width: 80%;
@@ -40,6 +56,7 @@ body:hover {
 }
 .icons p {
   color: white;
+  margin: 0;
 }
 /* icons End */
 
@@ -47,17 +64,50 @@ body:hover {
 /* comment End */
 
 /* imgModal Start*/
-.modal {
-  background-color: var(--darkGrey);
-  width: 40%;
-  height: 40%;
-  overflow: scroll;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  visibility: hidden;
+@media (min-width: 992px) {
+  /* large */
+  .modal {
+    background-color: var(--darkGrey);
+    width: 40%;
+    height: 60%;
+    overflow: scroll;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* visibility: hidden; */
+  }
 }
+
+@media (min-width: 576px) and (max-width: 992px) {
+  /* medium */
+  .modal {
+    background-color: var(--darkGrey);
+    width: 70%;
+    height: 50%;
+    overflow: scroll;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* visibility: hidden; */
+  }
+}
+@media (max-width: 576px) {
+  /* small */
+  .modal {
+    background-color: var(--darkGrey);
+    width: 60%;
+    height: 45%;
+    overflow: scroll;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* visibility: hidden; */
+  }
+}
+
 .topBar {
   background-color: var(--darkGrey);
   display: flex;
@@ -74,7 +124,7 @@ body:hover {
 }
 img {
   width: 100%;
-  height: 90%;
+  height: 80%;
 }
 .colors {
   background-color: var(--darkGrey);
@@ -130,13 +180,17 @@ img {
   border-top: 3px solid white;
 }
 #window {
-  width: 3%;
-  height: 3%;
+  width: 5%;
+  height: 100%;
   background-color: var(--lightGrey);
   border-top: 3px solid white;
   border-left: 3px solid white;
   border-bottom: 3px solid var(--borderGray);
   border-right: 3px solid var(--borderGray);
+}
+#window img {
+  height: 100%;
+  width: 100%;
 }
 #prcs {
   background-color: var(--lightGrey);
@@ -148,20 +202,61 @@ img {
 /* bottomBar End */
 
 /* windowModal Start */
-.windowModal {
-  width: 13%;
-  height: 25%;
-  background-color: var(--lightGrey);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  border-top: 3px solid white;
-  border-left: 3px solid white;
-  border-bottom: 3px solid var(--borderGray);
-  border-right: 3px solid var(--borderGray);
-  position: absolute;
-  bottom: 3%;
-  visibility: hidden;
+@media (min-width: 992px) {
+  /* large */
+  .windowModal {
+    width: 20%;
+    height: 40%;
+    background-color: var(--lightGrey);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    border-bottom: 3px solid var(--borderGray);
+    border-right: 3px solid var(--borderGray);
+    position: absolute;
+    bottom: 8%;
+    overflow: inherit;
+    /* visibility: hidden; */
+  }
+}
+@media (min-width: 576px) and (max-width: 992px) {
+  /* medium */
+  .windowModal {
+    width: 20%;
+    height: 40%;
+    background-color: var(--lightGrey);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    border-bottom: 3px solid var(--borderGray);
+    border-right: 3px solid var(--borderGray);
+    position: absolute;
+    bottom: 4%;
+    overflow: inherit;
+    /* visibility: hidden; */
+  }
+}
+@media (max-width: 576px) {
+  /* small */
+  .windowModal {
+    width: 35%;
+    height: 50%;
+    background-color: var(--lightGrey);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    border-bottom: 3px solid var(--borderGray);
+    border-right: 3px solid var(--borderGray);
+    position: absolute;
+    bottom: 3%;
+    overflow: inherit;
+  }
 }
 .prgm {
   width: 100%;
