@@ -96,8 +96,104 @@ img {
   background-color: var(--lightGrey);
   display: flex;
   justify-content: flex-start;
+  border-top: 3px solid white;
 }
 #window {
-  border: 3px solid var(--borderGray);
+  width: 3%;
+  height: 3%;
+  background-color: var(--lightGrey);
+  border-top: 3px solid white;
+  border-left: 3px solid white;
+  border-bottom: 3px solid var(--borderGray);
+  border-right: 3px solid var(--borderGray);
+}
+#prcs {
+  background-color: var(--lightGrey);
+  border-top: 3px solid white;
+  border-left: 3px solid white;
+  border-bottom: 3px solid var(--borderGray);
+  border-right: 3px solid var(--borderGray);
 }
 /* bottomBar End */
+
+/* windowModal Start */
+.windowModal {
+  width: 13%;
+  height: 25%;
+  background-color: var(--lightGrey);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-top: 3px solid white;
+  border-left: 3px solid white;
+  border-bottom: 3px solid var(--borderGray);
+  border-right: 3px solid var(--borderGray);
+}
+.prgm {
+  width: 100%;
+  height: 100%;
+  background-color: var(--lightGrey);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.prgm img {
+  width: 30%;
+}
+.prgm p {
+  width: 50%;
+  margin: auto;
+}
+.help {
+  width: 100%;
+  height: 100%;
+  background-color: var(--lightGrey);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.help img {
+  width: 30%;
+}
+.help p {
+  width: 50%;
+  margin: auto;
+}
+.shtDwn {
+  width: 100%;
+  height: 100%;
+  background-color: var(--lightGrey);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.shtDwn img {
+  width: 30%;
+}
+.shtDwn p {
+  width: 50%;
+  margin: auto;
+}
+/* .iconSide {
+  width: 100%;
+  height: 100%;
+  background-color: var(--lightGrey);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.iconSide img {
+  width: 50%;
+  height: 20%;
+  margin: auto;
+}
+.txtSide {
+  width: 100%;
+  height: 100%;
+  background-color: var(--lightGrey);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+} */
+
+/* windowModal End */
