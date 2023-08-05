@@ -111,11 +111,11 @@ button {
   position: relative;
   margin-top: 1%;
   margin-bottom: 2%;
-  border-bottom: 3px solid white;
-  border-right: 3px solid white;
-  border-top: 3px solid var(--borderGray);
-  border-left: 3px solid var(--borderGray);
-  background-color: white;
+  border-top: 3px solid white;
+  border-left: 3px solid white;
+  border-bottom: 3px solid var(--borderGray);
+  border-right: 3px solid var(--borderGray);
+  background-color: #ffecaf;
   color: black;
   left: 50%;
   transform: translateX(-50%);
@@ -350,7 +350,7 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: lime;
+  background-color: var(--lightGrey);
 }
 #windowBtn {
   width: 100%;
@@ -368,31 +368,24 @@ img {
 }
 #prcs1 {
   width: 100%;
-  /* background-color: var(--lightGrey); */
-  background-color: aqua;
-  border-top: 3px solid white;
-  border-left: 3px solid white;
-  border-bottom: 3px solid var(--borderGray);
-  border-right: 3px solid var(--borderGray);
+  background-color: var(--lightGrey);
+  border-right: 2px solid var(--borderGray);
   /* OnOff */
   visibility: hidden;
 }
 #prcs2 {
   width: 100%;
-  /* background-color: var(--lightGrey); */
-  background-color: yellow;
-  border-top: 3px solid white;
-  border-left: 3px solid white;
-  border-bottom: 3px solid var(--borderGray);
-  border-right: 3px solid var(--borderGray);
+  background-color: var(--lightGrey);
+  border-right: 2px solid var(--borderGray);
   /* OnOff */
   visibility: hidden;
 }
 .bottomBarRight {
-  background-color: #fff;
+  background-color: var(--lightGrey);
   display: flex;
   flex-direction: row;
   margin-right: 1%;
+  justify-self: flex-end;
   position: relative;
 }
 .bottomBarRight img {
