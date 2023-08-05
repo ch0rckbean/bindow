@@ -35,7 +35,7 @@ const cmtWrite = document.getElementById("cmtWrite");
 const cmtBtn = document.getElementById("cmtBtn");
 cmtBtn.addEventListener("click", write);
 
-//WindowModal & bottomBar
+//WindowModal
 const windowModal = document.querySelector(".windowModal");
 const prgm = document.querySelector(".prgm");
 const help = document.querySelector(".help");
@@ -44,49 +44,65 @@ const windowBtn = document.querySelector("#windowBtn");
 
 windowBtn.addEventListener("click", showWindowModal);
 
+//Bottombar : time
+let today = new Date();
+
+let hr = ("0" + today.getHours()).slice(-2);
+let min = ("0" + today.getMinutes()).slice(-2);
+
+var timeString = hr + ":" + min;
+
+console.log(timeString);
+time.innerText = timeString;
+
 //Functions
 function toggleModal() {
   if (modalArr.slice(-1)[0] == "imgModal") {
-    imgModal.style.zIndex = parseInt(cmtModal.style.zIndex) + 1;
+    imgModal.style.zIndex = cmtModal.style.zIndex + 1;
     console.log(imgModal.style.zIndex);
+    prcs1.style.visibility = "visible";
+    prcs1.style.display = "block";
     console.log(modalArr);
   } else if (modalArr.slice(-1)[0] == "cmtModal") {
-    cmtModal.style.zIndex = parseInt(imgModal.style.zIndex) + 1;
+    cmtModal.style.zIndex = imgModal.style.zIndex + 1;
+    prcs2.style.visibility = "visible";
+    prcs2.style.display = "block";
     console.log(cmtModal.style.zIndex);
     console.log(modalArr);
   }
 }
 function slide() {
-  if (modalArr.length === 0) return;
   //prcs2 안 먹음
   if (modalArr.slice(-1)[0] == "imgModal") {
-    prcs1.style.display = "block";
     imgModal.style.visibility = "hidden";
-    // modalArr.pop();
     console.log("prcs1");
     console.log(modalArr);
+    modalArr.pop();
   } else if (modalArr.slice(-1)[0] == "cmtModal") {
-    //   } else if (cmtModal.style.visibility == "visible") {
     console.log("prcs2");
-    prcs2.style.display = "block";
     cmtModal.style.visibility = "hidden";
+    modalArr.pop();
   }
+  console.log(modalArr.slice(-1)[0]);
 }
+
 function close() {
-  if (modalArr.length === 0) return;
   //prcs2 안 먹음
   if (modalArr.slice(-1)[0] == "imgModal") {
-    prcs1.style.display = "none";
     imgModal.style.visibility = "hidden";
-    // modalArr.pop();
+    prcs1.style.visibility = "hidden";
+    prcs1.style.display = "none";
+    modalArr.pop();
     console.log("closeP1");
-    console.log(modalArr);
   } else if (modalArr.slice(-1)[0] == "cmtModal") {
-    console.log("closeP2");
-    prcs2.style.display = "none";
     cmtModal.style.visibility = "hidden";
+    prcs2.style.visibility = "hidden";
+    // prcs2.style.display = "none";
+    modalArr.pop();
+    console.log("closeP2");
   }
 }
+
 function write() {
   let addText = `<p>${cmtWrite.value}</p>`;
   //   console.log(cmtWrite.value);
