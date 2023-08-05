@@ -80,6 +80,9 @@ button {
     /* visibility: hidden; */
   }
 }
+#cmtModal {
+  /* visibility: hidden; */
+}
 .cmt {
   height: 100%;
   display: flex;
@@ -273,17 +276,54 @@ img {
 /* imgModal End */
 
 /* bottomBar Start */
-.bottomBar {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  background-color: var(--lightGrey);
+@media (min-width: 992px) {
+  .bottomBar {
+    width: 100%;
+    height: 7%;
+    position: absolute;
+    bottom: 0;
+    background-color: var(--lightGrey);
+    display: flex;
+    justify-content: space-between;
+    border-top: 3px solid white;
+    flex-direction: row;
+  }
+}
+@media (min-width: 576px) and (max-width: 992px) {
+  /* medium */
+  .bottomBar {
+    width: 100%;
+    height: 5%;
+    position: absolute;
+    bottom: 0;
+    background-color: var(--lightGrey);
+    display: flex;
+    justify-content: space-between;
+    border-top: 3px solid white;
+    flex-direction: row;
+  }
+}
+@media (max-width: 576px) {
+  /* small */
+  .bottomBar {
+    width: 100%;
+    height: 5%;
+    position: absolute;
+    bottom: 0;
+    background-color: var(--lightGrey);
+    display: flex;
+    justify-content: space-between;
+    border-top: 3px solid white;
+    flex-direction: row;
+  }
+}
+
+.bottomBarLeft {
   display: flex;
   justify-content: flex-start;
-  border-top: 3px solid white;
 }
 #window {
-  width: 5%;
+  width: 100%;
   height: 100%;
   background-color: var(--lightGrey);
   border-top: 3px solid white;
@@ -295,13 +335,30 @@ img {
   height: 100%;
   width: 100%;
 }
-
 #prcs {
   background-color: var(--lightGrey);
   border-top: 3px solid white;
   border-left: 3px solid white;
   border-bottom: 3px solid var(--borderGray);
   border-right: 3px solid var(--borderGray);
+}
+.bottomBarRight {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  margin-right: 1%;
+  position: relative;
+}
+.bottomBarRight img {
+  margin-right: 5%;
+  width: 40%;
+  height: 100%;
+}
+#time {
+  line-height: 100%;
+  flex-wrap: wrap;
+  position: relative;
+  top: 20%;
 }
 /* bottomBar End */
 
@@ -320,10 +377,9 @@ img {
     border-bottom: 3px solid var(--borderGray);
     border-right: 3px solid var(--borderGray);
     position: absolute;
-    bottom: 8%;
+    bottom: 7%;
     overflow: inherit;
     z-index: 3;
-
     /* visibility: hidden; */
   }
 }
@@ -341,7 +397,7 @@ img {
     border-bottom: 3px solid var(--borderGray);
     border-right: 3px solid var(--borderGray);
     position: absolute;
-    bottom: 4%;
+    bottom: 5%;
     overflow: inherit;
     z-index: 3;
 
@@ -362,7 +418,7 @@ img {
     border-bottom: 3px solid var(--borderGray);
     border-right: 3px solid var(--borderGray);
     position: absolute;
-    bottom: 3%;
+    bottom: 5%;
     overflow: inherit;
     /* visibility: hidden; */
     z-index: 3;
