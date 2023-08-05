@@ -7,10 +7,12 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  font-family: monospace;
 }
 body:hover {
   cursor: url("./img/pointer.png"), auto;
 }
+a,
 button {
   cursor: url("./img/clicker.png"), auto;
 }
@@ -21,8 +23,17 @@ button {
   --borderWhite: rgb(228, 226, 226);
   --borderGray: gray;
 }
-/* .show {
+/* .imgModal.show {
   visibility: visible;
+}
+.cmtModal.show {
+  visibility: visible;
+} */
+.windowModal.show {
+  visibility: visible;
+}
+/* .hidden {
+  visibility: hidden;
 } */
 
 /* Make components */
@@ -49,7 +60,7 @@ button {
   margin-top: 1%;
   margin-left: 1%;
   text-align: center;
-  /* background-color: yellow; */
+  cursor: url("./img/clicker.png"), auto;
 }
 .icons img {
   width: 80%;
@@ -65,6 +76,10 @@ button {
 /* icons End */
 
 /* comment Start */
+#cmtModal {
+  /* OnOff */
+  visibility: hidden;
+}
 @media (min-width: 992px) {
   /* large */
   .modal {
@@ -80,19 +95,30 @@ button {
     /* visibility: hidden; */
   }
 }
-#cmtModal {
-  /* visibility: hidden; */
-}
+
 .cmt {
   height: 100%;
   display: flex;
   flex-direction: column;
   background-color: var(--lightGrey);
   overflow: hidden;
+  position: relative;
 }
 .cmtRes {
-  flex-basis: 50%;
   position: relative;
+  flex-basis: 50%;
+  width: 70%;
+  position: relative;
+  margin-top: 1%;
+  margin-bottom: 2%;
+  border-bottom: 3px solid white;
+  border-right: 3px solid white;
+  border-top: 3px solid var(--borderGray);
+  border-left: 3px solid var(--borderGray);
+  background-color: white;
+  color: black;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .cmtWriteDiv {
   background-color: var(--lightGrey);
@@ -156,6 +182,10 @@ button {
 /* comment End */
 
 /* imgModal Start*/
+#imgModal {
+  /* OnOff */
+  visibility: hidden;
+}
 @media (min-width: 992px) {
   /* large */
   .modal {
@@ -168,8 +198,6 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-
-    /* visibility: hidden; */
   }
 }
 
@@ -220,7 +248,7 @@ button {
   border-bottom: 3px solid var(--borderGray);
   border-right: 3px solid var(--borderGray);
 }
-#xBtn {
+.xBtn {
   /* xBtn */
   margin-right: 10px;
 }
@@ -320,9 +348,11 @@ img {
 
 .bottomBarLeft {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: lime;
 }
-#window {
+#windowBtn {
   width: 100%;
   height: 100%;
   background-color: var(--lightGrey);
@@ -331,16 +361,32 @@ img {
   border-bottom: 3px solid var(--borderGray);
   border-right: 3px solid var(--borderGray);
 }
-#window img {
+#windowBtn img {
+  cursor: url("./img/clicker.png"), auto;
   height: 100%;
   width: 100%;
 }
-#prcs {
-  background-color: var(--lightGrey);
+#prcs1 {
+  width: 100%;
+  /* background-color: var(--lightGrey); */
+  background-color: aqua;
   border-top: 3px solid white;
   border-left: 3px solid white;
   border-bottom: 3px solid var(--borderGray);
   border-right: 3px solid var(--borderGray);
+  /* OnOff */
+  visibility: hidden;
+}
+#prcs2 {
+  width: 100%;
+  /* background-color: var(--lightGrey); */
+  background-color: yellow;
+  border-top: 3px solid white;
+  border-left: 3px solid white;
+  border-bottom: 3px solid var(--borderGray);
+  border-right: 3px solid var(--borderGray);
+  /* OnOff */
+  visibility: hidden;
 }
 .bottomBarRight {
   background-color: #fff;
@@ -380,7 +426,8 @@ img {
     bottom: 7%;
     overflow: inherit;
     z-index: 3;
-    /* visibility: hidden; */
+    /* OnOff */
+    visibility: hidden;
   }
 }
 @media (min-width: 576px) and (max-width: 992px) {
