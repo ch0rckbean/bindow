@@ -35,24 +35,41 @@ const cmtWrite = document.getElementById("cmtWrite");
 const cmtBtn = document.getElementById("cmtBtn");
 cmtBtn.addEventListener("click", write);
 
-//WindowModal
+//WindowBtn
 const windowModal = document.querySelector(".windowModal");
 const prgm = document.querySelector(".prgm");
 const help = document.querySelector(".help");
 const shtDwn = document.querySelector(".shtDwn");
 const windowBtn = document.querySelector("#windowBtn");
-
 windowBtn.addEventListener("click", showWindowModal);
+
+//WindowModal
+let prgmTxt = document.querySelector(".prgm p");
+prgm.addEventListener("click", function () {
+  prgmTxt.innerText = "Notion, Github, Naver Blog, Velog, Comment, Galary";
+  prgmTxt.style.color = "#E55807";
+});
+
+let helpTxt = document.querySelector(".help p");
+help.addEventListener("click", function () {
+  helpTxt.innerText = "Explore the Bindow!";
+  helpTxt.style.color = "#E55807";
+});
+
+const off = document.querySelector(".off");
+const rtrn = document.getElementById("rtrn");
+shtDwn.addEventListener("click", function () {
+  off.style.display = "block";
+});
+rtrn.addEventListener("click", function () {
+  off.style.display = "none";
+});
 
 //Bottombar : time
 let today = new Date();
-
 let hr = ("0" + today.getHours()).slice(-2);
 let min = ("0" + today.getMinutes()).slice(-2);
-
 var timeString = hr + ":" + min;
-
-console.log(timeString);
 time.innerText = timeString;
 
 //Functions
