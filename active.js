@@ -92,11 +92,11 @@ function slide() {
   //prcs2 안 먹음
   if (modalArr.slice(-1)[0] == "imgModal") {
     imgModal.style.visibility = "hidden";
-    console.log("prcs1");
+    // console.log("slidePrcs1");
     console.log(modalArr);
     modalArr.pop();
   } else if (modalArr.slice(-1)[0] == "cmtModal") {
-    console.log("prcs2");
+    // console.log("slidePrcs2");
     cmtModal.style.visibility = "hidden";
     modalArr.pop();
   }
@@ -114,7 +114,7 @@ function close() {
   } else if (modalArr.slice(-1)[0] == "cmtModal") {
     cmtModal.style.visibility = "hidden";
     prcs2.style.visibility = "hidden";
-    // prcs2.style.display = "none";
+    prcs2.style.display = "none";
     modalArr.pop();
     console.log("closeP2");
   }

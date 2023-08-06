@@ -371,7 +371,7 @@ img {
   background-color: var(--lightGrey);
   border-right: 2px solid var(--borderGray);
   /* OnOff */
-  visibility: hidden;
+  display: none;
 }
 #prcs2 {
   width: 100%;
