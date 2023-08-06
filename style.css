@@ -23,19 +23,10 @@ button {
   --borderWhite: rgb(228, 226, 226);
   --borderGray: gray;
 }
-/* .imgModal.show {
-  visibility: visible;
-}
-.cmtModal.show {
-  visibility: visible;
-} */
+
 .windowModal.show {
   visibility: visible;
 }
-/* .hidden {
-  visibility: hidden;
-} */
-
 /* Make components */
 /* .sixPer {
   flex-basis: 60%;
@@ -92,10 +83,10 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    /* visibility: hidden; */
+    /* onoff */
+    visibility: hidden;
   }
 }
-
 .cmt {
   height: 100%;
   display: flex;
@@ -213,7 +204,7 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    /* visibility: hidden; */
+    visibility: hidden;
   }
 }
 @media (max-width: 576px) {
@@ -228,7 +219,7 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    /* visibility: hidden; */
+    visibility: hidden;
   }
 }
 
@@ -442,6 +433,7 @@ img {
     bottom: 7%;
     overflow: inherit;
     z-index: 3;
+    font-size: large;
     /* OnOff */
     visibility: hidden;
   }
@@ -463,15 +455,16 @@ img {
     bottom: 5%;
     overflow: inherit;
     z-index: 3;
-
-    /* visibility: hidden; */
+    font-size: large;
+    /* OnOff */
+    visibility: hidden;
   }
 }
 @media (max-width: 576px) {
   /* small */
   .windowModal {
     width: 35%;
-    height: 40%;
+    height: 30%;
     background-color: var(--lightGrey);
     display: flex;
     flex-direction: column;
@@ -483,8 +476,10 @@ img {
     position: absolute;
     bottom: 5%;
     overflow: inherit;
-    /* visibility: hidden; */
     z-index: 3;
+    /* font-size: large; */
+    /* OnOff */
+    visibility: hidden;
   }
 }
 .prgm {
@@ -627,7 +622,7 @@ img {
   width: 100%;
   height: 100%;
   background-color: #5a7edc;
-  z-index: 5;
+  z-index: 2147483647;
   position: absolute;
   display: none;
   animation: fadein 2s;
