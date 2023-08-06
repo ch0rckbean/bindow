@@ -642,6 +642,7 @@ img {
   position: relative;
 }
 
+/* Animation Start */
 /* shutDown Animation */
 @keyframes fadein {
   from {
@@ -678,4 +679,4 @@ img {
 .off h1 span:nth-of-type(2) {
   animation-delay: 0.3s;
 }
-/* shutDown Screen End*/
+/* Animation Start  End*/

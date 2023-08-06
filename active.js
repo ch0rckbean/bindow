@@ -10,24 +10,15 @@ const prcs2 = document.getElementById("prcs2");
 
 //to manage modal z-index(1) : toggleModal()
 let modalArr = [];
-galary.addEventListener("click", function () {
-  imgModal.style.visibility = "visible";
-  //   imgModal.classList.add("show");
-  console.log("show");
-  modalArr.push("imgModal");
-  console.log(modalArr);
-  toggleModal();
-});
+galary.addEventListener("click", showImgModal);
+comment.addEventListener("click", showCmtModal);
+
 //to manage modal z-index(2) : toggleModal()
-comment.addEventListener("click", function () {
-  cmtModal.style.visibility = "visible";
-  console.log("show");
-  modalArr.push("cmtModal");
-  console.log(modalArr);
-  toggleModal();
-});
 _Btn.addEventListener("click", slide);
 xBtn.addEventListener("click", close);
+
+prcs1.addEventListener("click", showImgModal);
+prcs2.addEventListener("click", showCmtModal);
 
 //Comment
 const cmtRes = document.querySelector(".cmtRes");
@@ -58,6 +49,7 @@ help.addEventListener("click", function () {
 
 const off = document.querySelector(".off");
 const rtrn = document.getElementById("rtrn");
+const fadeoutClass = document.querySelector(".fadeoutClass");
 shtDwn.addEventListener("click", function () {
   off.style.display = "block";
 });
@@ -73,10 +65,27 @@ var timeString = hr + ":" + min;
 time.innerText = timeString;
 
 //Functions
+
+function showImgModal() {
+  imgModal.style.visibility = "visible";
+  //   imgModal.classList.add("show");
+  console.log("show");
+  modalArr.push("imgModal");
+  console.log(modalArr);
+  toggleModal();
+}
+
+function showCmtModal() {
+  cmtModal.style.visibility = "visible";
+  console.log("show");
+  modalArr.push("cmtModal");
+  console.log(modalArr);
+  toggleModal();
+}
 function toggleModal() {
   if (modalArr.slice(-1)[0] == "imgModal") {
     imgModal.style.zIndex = cmtModal.style.zIndex + 1;
-    console.log(imgModal.style.zIndex);
+    // console.log(imgModal.style.zIndex);
     prcs1.style.visibility = "visible";
     prcs1.style.display = "block";
     console.log(modalArr);
@@ -84,7 +93,7 @@ function toggleModal() {
     cmtModal.style.zIndex = imgModal.style.zIndex + 1;
     prcs2.style.visibility = "visible";
     prcs2.style.display = "block";
-    console.log(cmtModal.style.zIndex);
+    // console.log(cmtModal.style.zIndex);
     console.log(modalArr);
   }
 }
