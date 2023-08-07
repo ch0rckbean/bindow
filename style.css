@@ -238,7 +238,7 @@ button {
   }
   .colors > button {
     width: 10%;
-    height: 9vh;
+    height: 8vh;
     border-color: var(--borderWhite);
   }
 }
@@ -319,6 +319,9 @@ button {
   border-bottom: 3px solid var(--borderGray);
   border-right: 3px solid var(--borderGray);
 }
+._Btn {
+  font-weight: bold;
+}
 .xBtn {
   /* xBtn */
   margin-right: 10px;
@@ -326,6 +329,7 @@ button {
 .topBarLeft {
   margin-left: 1%;
   color: white;
+  font-size: large;
 }
 img {
   width: 100%;
