@@ -41,28 +41,57 @@ button {
 } */
 
 /* icons Start */
-.icons {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 5%;
-  height: 100%;
-  margin-top: 1%;
-  margin-left: 1%;
-  text-align: center;
-  cursor: url("./img/clicker.png"), auto;
+@media (min-width: 1200px) {
+  /* XLarge */
+  .icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 5%;
+    height: 100%;
+    margin-top: 2%;
+    margin-left: 1%;
+    text-align: center;
+    cursor: url("./img/clicker.png"), auto;
+  }
+  .icons img {
+    width: 75%;
+    height: 70%;
+  }
+  .icons a {
+    text-decoration: none;
+  }
+  .icons p {
+    color: white;
+    margin: 0;
+  }
 }
-.icons img {
-  width: 80%;
-  height: 50%;
-}
-.icons a {
-  text-decoration: none;
-}
-.icons p {
-  color: white;
-  margin: 0;
+@media (max-width: 1200px) {
+  /* large, medium, small */
+  .icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 5%;
+    height: 100%;
+    margin-top: 1%;
+    margin-left: 1%;
+    text-align: center;
+    cursor: url("./img/clicker.png"), auto;
+  }
+  .icons img {
+    width: 80%;
+    height: 50%;
+  }
+  .icons a {
+    text-decoration: none;
+  }
+  .icons p {
+    color: white;
+    margin: 0;
+  }
 }
 /* icons End */
 
@@ -122,7 +151,24 @@ button {
   left: 50%;
   transform: translateX(-50%);
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
+  /* XLarge */
+  #cmtBtn {
+    position: absolute;
+    bottom: 15%;
+    right: 10%;
+    width: 8%;
+    height: 8%;
+    overflow: inherit;
+    /* background-color: var(--lightGrey); */
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    border-bottom: 3px solid var(--borderGray);
+    border-right: 3px solid var(--borderGray);
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
   /* large */
   #cmtBtn {
     position: absolute;
@@ -177,6 +223,7 @@ button {
   /* OnOff */
   visibility: hidden;
 }
+
 @media (min-width: 992px) {
   /* large */
   .modal {
@@ -295,7 +342,21 @@ img {
 /* imgModal End */
 
 /* bottomBar Start */
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
+  /* XLarge */
+  .bottomBar {
+    width: 100%;
+    height: 5%;
+    position: absolute;
+    bottom: 0;
+    background-color: var(--lightGrey);
+    display: flex;
+    justify-content: space-between;
+    border-top: 3px solid white;
+    flex-direction: row;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
   .bottomBar {
     width: 100%;
     height: 7%;
@@ -415,8 +476,29 @@ img {
   flex-direction: column;
   justify-content: space-around;
 } */
-
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
+  /* XLarge */
+  .windowModal {
+    width: 15%;
+    height: 30%;
+    background-color: var(--lightGrey);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    border-bottom: 3px solid var(--borderGray);
+    border-right: 3px solid var(--borderGray);
+    position: absolute;
+    bottom: 5%;
+    overflow: inherit;
+    z-index: 3;
+    font-size: larger;
+    /* OnOff */
+    visibility: hidden;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
   /* large */
   .windowModal {
     width: 20%;
@@ -535,7 +617,36 @@ img {
 /* windowsModal End */
 
 /* shutDown Screen Start*/
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
+  /* XLarge */
+  .offContents {
+    width: 100%;
+    height: 100%;
+    background-color: #5a7edc;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -30%);
+  }
+  .off img {
+    width: 20%;
+    height: 30%;
+    margin-bottom: 1%;
+  }
+  #rtrn {
+    width: 8%;
+    height: 6%;
+    background-color: tomato;
+    color: white;
+    margin-top: 1%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
   /* large */
   .offContents {
     width: 100%;

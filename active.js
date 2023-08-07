@@ -3,19 +3,23 @@ const galary = document.getElementById("galary");
 const imgModal = document.getElementById("imgModal");
 const comment = document.getElementById("comment");
 const cmtModal = document.getElementById("cmtModal");
-const _Btn = document.querySelector("._Btn");
-const xBtn = document.querySelector(".xBtn");
+const _Btns = document.querySelectorAll("._Btn");
+const xBtns = document.querySelectorAll(".xBtn");
 const prcs1 = document.getElementById("prcs1");
 const prcs2 = document.getElementById("prcs2");
-
+// console.log(window.innerWidth, window.innerHeight);
 //to manage modal z-index(1) : toggleModal()
 let modalArr = [];
 galary.addEventListener("click", showImgModal);
 comment.addEventListener("click", showCmtModal);
 
 //to manage modal z-index(2) : toggleModal()
-_Btn.addEventListener("click", slide);
-xBtn.addEventListener("click", close);
+for (let _Btn of _Btns) {
+  _Btn.addEventListener("click", slide);
+}
+for (let xBtn of xBtns) {
+  xBtn.addEventListener("click", close);
+}
 
 prcs1.addEventListener("click", showImgModal);
 prcs2.addEventListener("click", showCmtModal);
@@ -97,7 +101,10 @@ function toggleModal() {
     console.log(modalArr);
   }
 }
+
 function slide() {
+  console.log(modalArr);
+  console.log(modalArr.slice(-1)[0]);
   //prcs2 안 먹음
   if (modalArr.slice(-1)[0] == "imgModal") {
     imgModal.style.visibility = "hidden";
