@@ -524,10 +524,9 @@ img {
     border-bottom: 3px solid var(--borderGray);
     border-right: 3px solid var(--borderGray);
     position: absolute;
-    bottom: 5%;
+    bottom: 7%;
     overflow: inherit;
     z-index: 3;
-    font-size: larger;
     /* OnOff */
     visibility: hidden;
   }
@@ -549,7 +548,6 @@ img {
     bottom: 7%;
     overflow: inherit;
     z-index: 3;
-    font-size: large;
     /* OnOff */
     visibility: hidden;
   }
@@ -558,7 +556,7 @@ img {
   /* medium */
   .windowModal {
     width: 30%;
-    height: 35%;
+    height: 40%;
     background-color: var(--lightGrey);
     display: flex;
     flex-direction: column;
@@ -571,7 +569,6 @@ img {
     bottom: 5%;
     overflow: inherit;
     z-index: 3;
-    font-size: large;
     /* OnOff */
     visibility: hidden;
   }
@@ -580,7 +577,7 @@ img {
   /* small */
   .windowModal {
     width: 35%;
-    height: 30%;
+    height: 40%;
     background-color: var(--lightGrey);
     display: flex;
     flex-direction: column;
@@ -593,7 +590,6 @@ img {
     bottom: 5%;
     overflow: inherit;
     z-index: 3;
-    /* font-size: large; */
     /* OnOff */
     visibility: hidden;
   }
