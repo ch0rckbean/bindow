@@ -513,8 +513,8 @@ img {
 @media (min-width: 1200px) {
   /* XLarge */
   .windowModal {
-    width: 10%;
-    height: 25%;
+    width: 15%;
+    height: 40%;
     background-color: var(--lightGrey);
     display: flex;
     flex-direction: column;
