@@ -89,7 +89,7 @@ function showCmtModal() {
 function toggleModal() {
   if (modalArr.slice(-1)[0] == "imgModal") {
     imgModal.style.zIndex = cmtModal.style.zIndex + 1;
-    // console.log(imgModal.style.zIndex);
+    console.log(imgModal.style.zIndex);
     prcs1.style.visibility = "visible";
     prcs1.style.display = "block";
     console.log(modalArr);
@@ -99,6 +99,7 @@ function toggleModal() {
     prcs2.style.display = "block";
     // console.log(cmtModal.style.zIndex);
     console.log(modalArr);
+    console.log(cmtModal.style.zIndex);
   }
 }
 

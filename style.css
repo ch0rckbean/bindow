@@ -204,7 +204,7 @@ button {
   /* small */
   #cmtBtn {
     position: absolute;
-    bottom: 5%;
+    bottom: 10%;
     right: 1%;
     width: fit-content;
     height: 8%;
@@ -223,8 +223,26 @@ button {
   /* OnOff */
   visibility: hidden;
 }
-
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
+  /* XLarge */
+  .modal {
+    background-color: var(--darkGrey);
+    width: 65%;
+    height: 60%;
+    overflow: scroll;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  .colors > button {
+    width: 10%;
+    height: 9vh;
+    border-color: var(--borderWhite);
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
   /* large */
   .modal {
     background-color: var(--darkGrey);
@@ -237,6 +255,11 @@ button {
     transform: translate(-50%, -50%);
     z-index: 2;
   }
+  .colors > button {
+    width: 100%;
+    height: 8vh;
+    border-color: var(--borderWhite);
+  }
 }
 
 @media (min-width: 576px) and (max-width: 992px) {
@@ -244,7 +267,7 @@ button {
   .modal {
     background-color: var(--darkGrey);
     width: 70%;
-    height: 50%;
+    height: 40%;
     overflow: scroll;
     position: absolute;
     top: 50%;
@@ -252,6 +275,11 @@ button {
     transform: translate(-50%, -50%);
     z-index: 2;
     visibility: hidden;
+  }
+  .colors > button {
+    width: 10%;
+    height: 5vh;
+    border-color: var(--borderWhite);
   }
 }
 @media (max-width: 576px) {
@@ -267,6 +295,11 @@ button {
     transform: translate(-50%, -50%);
     z-index: 2;
     visibility: hidden;
+  }
+  .colors > button {
+    width: 10%;
+    height: 5vh;
+    border-color: var(--borderWhite);
   }
 }
 
@@ -304,11 +337,7 @@ img {
   flex-direction: row;
   justify-content: flex-start;
 }
-.colors > button {
-  width: 10%;
-  height: 10vh;
-  border-color: var(--borderWhite);
-}
+
 #btn1 {
   background-color: aquamarine;
 }
@@ -450,6 +479,7 @@ img {
   flex-wrap: wrap;
   position: relative;
   top: 30%;
+  font-size: medium;
 }
 /* bottomBar End */
 
