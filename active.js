@@ -108,7 +108,6 @@ function toggleModal() {
 function slide() {
   console.log(modalArr);
   console.log(modalArr.slice(-1)[0]);
-  //prcs2 안 먹음
   if (modalArr.slice(-1)[0] == 'imgModal') {
     imgModal.style.visibility = 'hidden';
     // console.log("slidePrcs1");
@@ -123,7 +122,6 @@ function slide() {
 }
 
 function close() {
-  //prcs2 안 먹음
   if (modalArr.slice(-1)[0] == 'imgModal') {
     imgModal.style.visibility = 'hidden';
     prcs1.style.visibility = 'hidden';
